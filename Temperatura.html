@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio NO.-2</title>
+</head>
+<style>
+  * {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+
+  .container {
+    display: flex;
+    height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #126e82;
+    width: 100%;
+
+  }
+
+  .logo {
+    padding-left: 5px;
+  }
+
+  .miNombre {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  main {
+    background-color: #51c4d3;
+    height: 80vh;
+    /* color: white; */
+  }
+
+  footer {
+    background-color: #126e82;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  form input {
+    color: black;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    text-align: center;
+    background-color: #d8e3e7;
+  }
+
+</style>
+
+<body>
+  <header class="container">
+    <div class="Logo">
+      <h4>Tu logo Aquí</h4>
+    </div>
+    <div>
+      <h3>Conversor de Grados Centígrados a Grados Fahrenheit</h3>
+    </div>
+    <div class="miNombre">
+      <h4>Iván Alexis <br> Pérez Carrillo</h4>
+    </div>
+  </header>
+  <main>
+    <div class="container2">
+      <form>
+        <input type="text" placeholder="Grados Centígrados" id="centigrados">
+        <input type="button" id="btn" value="C-Fahr">
+        <input type="text" placeholder="Grados Fahrenheit" id="fahrenheit">
+        <input type="button" id="btn2" value="Fahr-C">
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div class="container3"><h2>Derechos reservados</h2></div>
+    <div class="container3"><h2>Derechos reservados</h2></div>
+    <div class="container3"><h2>Derechos reservados</h2></div>
+  </footer>
+  <script>
+    const convertir = _ => {
+      document.querySelector("#fahrenheit").value = (document.querySelector("#centigrados").value) * (9 / 5) + (32);
+    }
+    const convertir2 = _ => {
+      document.querySelector("#centigrados").value = ((document.querySelector("#fahrenheit").value) - 32) / 1.8;
+    }
+    document.querySelector("#btn").addEventListener("click", convertir)
+    document.querySelector("#btn2").addEventListener("click", convertir2)
+
+  </script>
+</body>
+
+</html>
